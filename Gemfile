@@ -4,16 +4,22 @@ ruby '1.9.3' #不用指定1.9.3p545，只需1.9.3
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3' , group: :development, group: :test
+# gem 'sqlite3' , group: :development, group: :test
+# gem 'pg', '0.15.1'
 
 group :development, :test do
-   #gem 'sqlite3'
+   gem 'sqlite3'
    gem 'rspec-rails', '2.13.1'
+   gem 'guard-rspec', '2.5.0'
+   #gem 'spork-rails', '4.0.0'
+   #gem 'guard-spork', '1.5.0'
+   #gem 'childprocess', '0.5.3'
 end
 
 group :test do
    gem 'selenium-webdriver', '2.35.1'
    gem 'capybara', '2.1.0'
+   gem 'libnotify', '0.8.0'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -42,6 +48,8 @@ gem 'spring',        group: :development
 group :production do
    gem 'pg','0.15.1'
 end
+
+ gem 'rb-readline'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
