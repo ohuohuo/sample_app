@@ -1,6 +1,6 @@
 #require 'rubygems'
 #require 'spork'
-#require 'minitest/autorun'
+require 'minitest/autorun'
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 #Spork.prefork do
